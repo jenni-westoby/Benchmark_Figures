@@ -1,0 +1,5 @@
+*.RDS filter=lfs diff=lfs merge=lfs -text
+data/SupplementaryFigure7.gz filter=lfs diff=lfs merge=lfs -text
+data/SupplementaryFigure12.gz filter=lfs diff=lfs merge=lfs -text
+data/SupplementaryFigure15.gz filter=lfs diff=lfs merge=lfs -text
+data/SupplementaryFigure10_scater_object.RData filter=lfs diff=lfs merge=lfs -text
