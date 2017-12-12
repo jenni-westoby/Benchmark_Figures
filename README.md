@@ -26,30 +26,32 @@ Note - for data/SupplementaryFigure7.gz, data/SupplementaryFigure12.gz, data/Sup
 
 ![png](pngs/Figure3.png)
 
-# Figure 4a
+# Figure 4
 
-* [data](data/Figure4a.txt)
-* [code](scripts/Figure4a.R)
-* [pdf](pdfs/Figure4a.pdf)
+* [data part 1](data/Figure4.txt)
+* [data part 2](data/Figure1.txt
+* [code](scripts/Figure4.R)
+* [pdf](pdfs/Figure4.pdf)
 
-![png](pngs/Figure4a.png)
-
-# Figure 4b
-
-* [data](data/Figure4b.txt)
-* [code](scripts/Figure4b.R)
-* [pdf](pdfs/Figure4b.pdf)
-
-![png](pngs/Figure4b.png)
+![png](pngs/Figure4.png)
 
 # Figure 5
 
-* [data part 1](data/Figure5_number_of_isoforms.txt)
-* [data part 2](data/Figure_5_percent_exprs.txt)
-* [code](scripts/Figure5.R)
+* [data part 1](data/Figure5a.txt)
+* [data part 2](data/Figure5b.txt)
+* [code](data/Figure5.R)
 * [pdf](pdfs/Figure5.pdf)
 
-![png](pngs/Figure5.png)
+![png](pngs/Figure5.png) 
+
+# Figure 6
+
+* [data part 1](data/Figure6_number_of_isoforms.txt)
+* [data part 2](data/Figure_6_percent_exprs.txt)
+* [code](scripts/Figure6.R)
+* [pdf](pdfs/Figure6.pdf)
+
+![png](pngs/Figure6.png)
 
 # Supplementary Figure 1
 
@@ -191,12 +193,20 @@ Note - for data/SupplementaryFigure7.gz, data/SupplementaryFigure12.gz, data/Sup
 
 ![png](pngs/SupplementaryFigure15.png)
 
-
 # Supplementary Figure 16
 
-* [data part 1](data/Figure5_number_of_isoforms.txt)
-* [data part 2](data/Figure_5_percent_exprs.txt)
+* [data part 1](data/Figure4.txt)
+* [data part 2](data/Figure2.txt)
 * [code](scripts/SupplementaryFigure16.R)
 * [pdf](pdfs/SupplementaryFigure16.pdf)
 
 ![png](pngs/SupplementaryFigure16.png)
+
+# Supplementary Figure 17
+
+* [data part 1](data/Figure6_number_of_isoforms.txt)
+* [data part 2](data/Figure_6_percent_exprs.txt)
+* [code](scripts/SupplementaryFigure17.R)
+* [pdf](pdfs/SupplementaryFigure17.pdf)
+
+![png](pngs/SupplementaryFigure17.png)
