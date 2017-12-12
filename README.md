@@ -29,7 +29,7 @@ Note - for data/SupplementaryFigure7.gz, data/SupplementaryFigure12.gz, data/Sup
 # Figure 4
 
 * [data part 1](data/Figure4.txt)
-* [data part 2](data/Figure1.txt
+* [data part 2](data/Figure1.txt)
 * [code](scripts/Figure4.R)
 * [pdf](pdfs/Figure4.pdf)
 
