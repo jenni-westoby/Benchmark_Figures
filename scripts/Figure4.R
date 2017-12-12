@@ -39,42 +39,45 @@ make_ggplot<-function(df, title, ylabel){
 bulk<-read.table("../data/Figure4.txt")
 
 #split into ES and Blueprint
-ES_bulk<-bulk[bulk$Sample_name=="ERR522956",]
+B_bulk<-bulk[bulk$Sample_name!="ERR522956",]
 
 #delete Sample_name column and create an Experiment column
-ES_bulk<-cbind(ES_bulk[,1:2], Value=ES_bulk[,4], Experiment="bulk")
+B_bulk<-cbind(B_bulk[,1:2], Value=B_bulk[,4], Experiment="bulk")
 
-#READ IN SINGLE CELL DATA
-#Read in ES
-ES_single<-read.table("../data/Figure2.txt")
+#Read in Blueprint
+B_single<-read.table("../data/Figure1.txt")
 
-#Sort out columns of ES_single
-ES_single<-data.frame(Statistic=ES_single$statistic, Tool=ES_single$Var1, Value=as.numeric(ES_single$value), Experiment="single")
+#Only keep RSEM Blueprint simulations
+B_single<-B_single[B_single$Simulation=="RSEMsim",]
 
-ES_df<-rbind(ES_bulk, ES_single)
+#Delete Simulation column and create an Experiment column
+B_single<-cbind(B_single[,2:4], Experiment="single")
+
+#Fuse bulk and single cell dfs
+B_df<-rbind(B_bulk, B_single)
 
 #Remove trailing strings after tool names
-ES_df<-remove_trail(ES_df)
+B_df<-remove_trail(B_df)
 
-#Figure 4 style ES plots
-ES_spear<-ES_df[ES_df$Statistic=="spearmans",]
-ES_nrmse<-ES_df[ES_df$Statistic=="nrmse",]
-ES_precision<-ES_df[ES_df$Statistic=="precision",]
-ES_recall<-ES_df[ES_df$Statistic=="recall",]
-ES_F1<-ES_df[ES_df$Statistic=="F1",]
+#Figuren style Blueprint plots
+B_spear<-B_df[B_df$Statistic=="spearmans",]
+B_nrmse<-B_df[B_df$Statistic=="nrmse",]
+B_precision<-B_df[B_df$Statistic=="precision",]
+B_recall<-B_df[B_df$Statistic=="recall",]
+B_F1<-B_df[B_df$Statistic=="F1",]
 
 
-ES_spearmans<-make_ggplot(ES_spear, "Spearman's Rho", "Spearman's Rho")
-ES_nrmse<-make_ggplot(ES_nrmse, "NRMSE", "NRMSE")
-ES_precision<-make_ggplot(ES_precision, "Precision", "Precision")
-ES_recall<-make_ggplot(ES_recall, "Recall", "Recall")
-ES_F1<-make_ggplot(ES_F1, "F1", "F1")
+spearmans<-make_ggplot(B_spear, "Spearman's Rho", "Spearman's Rho")
+nrmse<-make_ggplot(B_nrmse, "NRMSE", "NRMSE")
+precision<-make_ggplot(B_precision, "Precision", "Precision")
+recall<-make_ggplot(B_recall, "Recall", "Recall")
+F1<-make_ggplot(B_F1, "F1", "F1")
 
-ggarrange(ES_F1, ggarrange(ES_precision, ES_recall, nrow=2), ES_spearmans,ES_nrmse,                                         
+ggarrange(F1, ggarrange(precision, recall, nrow=2), spearmans,nrmse,                                         
           nrow = 2,
           ncol = 2,
           labels = c("A","","B", "C")                                 
 ) 
 
-ggsave("../pdfs/SupplementaryFigure16.pdf", plot = last_plot(), width=170 *2, units=c("mm") )
-ggsave("../pngs/SupplementaryFigure16.png", plot = last_plot(), width=170 *2, units=c("mm"))
+ggsave("../pdfs/Figure4.pdf", plot = last_plot(), width=170 *2, units=c("mm") )
+ggsave("../pngs/Figure4.png", plot = last_plot(), width=170 *2, units=c("mm") )
