@@ -35,18 +35,18 @@ sc_kolod<-data.frame(sc_kolod, origin="ES single cell")
 
 
 #bulk BLUEPRINT expression matrix
-bulk_B_1<-read.table("~/data/quant_results/B_B_M_1_B1-Aligned.sortedByCoord.out.ex.bam/abundance.tsv",header=T)
+bulk_B_1<-read.table("../data/SupplementaryFigure17_B1_quant_results.tsv",header=T)
 bulk_B_1<-make_df(bulk_B_1, "bulk_B_1", "BLUEPRINT bulk")
 
-bulk_B_2<-read.table("~/data/quant_results/B_B_M_1_B2-Aligned.sortedByCoord.out.ex.bam/abundance.tsv", header=T)
+bulk_B_2<-read.table("../data/SupplementaryFigure17_B2_quant_results.tsv", header=T)
 bulk_B_2<-make_df(bulk_B_2, "bulk_B_2", "BLUEPRINT bulk")
 
-bulk_B_3<-read.table("~/data/quant_results/B_B_M_1_B3-Aligned.sortedByCoord.out.ex.bam/abundance.tsv", header=T)
+bulk_B_3<-read.table("../data/SupplementaryFigure17_B3_quant_results.tsv", header=T)
 bulk_B_3<-make_df(bulk_B_3, "bulk_B_3", "BLUEPRINT bulk")
 
 
 #bulk Kolod et al expression matrix
-bulk_ES<-read.table("~/data/quant_results/ERR522956/abundance.tsv", header=T)
+bulk_ES<-read.table("../data/SupplementaryFigure17_ES_quant_results.tsv", header=T)
 bulk_ES<-make_df(bulk_ES, "bulk_ES", "ES bulk")
 
 master_df<-rbind(sc_blue, sc_kolod, bulk_B_1,bulk_B_2,bulk_B_3, bulk_ES)

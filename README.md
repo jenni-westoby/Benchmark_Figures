@@ -204,9 +204,23 @@ Note - for data/SupplementaryFigure7.gz, data/SupplementaryFigure12.gz, data/Sup
 
 # Supplementary Figure 17
 
-* [data part 1](data/Figure6_number_of_isoforms.txt)
-* [data part 2](data/Figure_6_percent_exprs.txt)
+* [data part 1](data/SupplementaryFigure7.gz)
+* [data part 2](data/SupplementaryFigure12.gz)
+* [data part 3](data/SupplementaryFigure17_B1_quant_results.tsv)
+* [data part 4](data/SupplementaryFigure17_B2_quant_results.tsv)
+* [data part 5](data/SupplementaryFigure17_B3_quant_results.tsv)
+* [data part 6](data/SupplementaryFigure17_ES_quant_results.tsv)
 * [code](scripts/SupplementaryFigure17.R)
 * [pdf](pdfs/SupplementaryFigure17.pdf)
 
 ![png](pngs/SupplementaryFigure17.png)
+
+
+# Supplementary Figure 18
+
+* [data part 1](data/Figure6_number_of_isoforms.txt)
+* [data part 2](data/Figure_6_percent_exprs.txt)
+* [code](scripts/SupplementaryFigure18.R)
+* [pdf](pdfs/SupplementaryFigure18.pdf)
+
+![png](pngs/SupplementaryFigure18.png)
